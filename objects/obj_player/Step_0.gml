@@ -2,10 +2,17 @@
 scr_keybinds();
 
 var _moveH = right - left;
-var _moveV = down - up;
 hsp	= _moveH * moveSpeed;
-vsp = _moveV * moveSpeed;
+vsp = vsp + grv;
 
+if(place_meeting(x,y+1,obj_wall)) && (up){
+	vsp = -jumpHeight;
+	jump = true;
+	if(!magicAnim)
+		sprite_index = spr_player_jump;
+} else if(vsp > 0) {
+	jump = false;
+}
 #region Collision
 if(place_meeting(x+hsp, y, obj_wall)){
 	while(!place_meeting(x+sign(hsp),y,obj_wall)){
@@ -24,5 +31,8 @@ if(place_meeting(x,y+vsp,obj_wall)){
 y = y + vsp;
 #endregion
 #region Animations
+if (hsp != 0) image_xscale = (sign(hsp)*obj_player.image_yscale);
+if(!magicAnim and !jump) sprite_index = (hsp != 0) ? spr_player : spr_player;
+else if(!magicAnim and jump) sprite_index = spr_player_jump;
 if(fire and magic) instance_create_layer(x,y,"Instances",obj_magic);
 #endregion
