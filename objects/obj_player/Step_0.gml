@@ -24,5 +24,5 @@ if(place_meeting(x,y+vsp,obj_wall)){
 y = y + vsp;
 #endregion
 #region Animations
-if(fire) instance_create_layer(x,y,"Instances",obj_magic);
+if(fire and magic) instance_create_layer(x,y,"Instances",obj_magic);
 #endregion
