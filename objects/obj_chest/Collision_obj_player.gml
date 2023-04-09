@@ -1,2 +1,2 @@
 //placeholder, play  open animation then destroy
-self.instance_destroy();
+self.sprite_index = spr_chestO;
