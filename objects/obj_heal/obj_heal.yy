@@ -1,9 +1,8 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_door",
+  "name": "obj_heal",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},"eventNum":0,"eventType":4,"isDnD":false,},
   ],
   "managed": true,
@@ -26,14 +25,11 @@
   "physicsShape": 1,
   "physicsShapePoints": [],
   "physicsStartAwake": true,
-  "properties": [
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"open","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"0","varType":3,},
-    {"resourceType":"GMObjectProperty","resourceVersion":"1.0","name":"once","filters":[],"listItems":[],"multiselect":false,"rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"value":"True","varType":3,},
-  ],
+  "properties": [],
   "solid": false,
   "spriteId": {
-    "name": "spr_doorClosed",
-    "path": "sprites/spr_doorClosed/spr_doorClosed.yy",
+    "name": "spr_Heal",
+    "path": "sprites/spr_Heal/spr_Heal.yy",
   },
   "spriteMaskId": null,
   "visible": true,
