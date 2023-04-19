@@ -2,19 +2,32 @@
 
 if(open and once)
 {
-	randomize();
-	percent = irandom_range(0,100);
-	if(percent < 70)
+	if(obj_scoreboard.rooms == 4)
 	{
-		path = 1;
+		path = 4;
 	}
-	if (percent > 70 and percent < 90)
+	
+	else if(obj_scoreboard.rooms == 9)
 	{
-		path = 2;
+		path = 5;
 	}
-	if (percent > 90)
+	
+	else
 	{
-		path = 3;
+		randomize();
+		percent = irandom_range(0,100);
+		if(percent < 70)
+		{
+			path = 1;
+		}
+		if (percent > 70 and percent < 90)
+		{
+			path = 2;
+		}
+		if (percent > 90)
+		{
+			path = 3;
+		}
 	}
 	switch(path)
 	{
@@ -27,6 +40,11 @@ if(open and once)
 		case 3:
 			self.sprite_index = spr_doorHeal;
 			break;
+		case 4:
+			self.sprite_index = spr_doorMini;
+			break;
+		case 5:
+			self.sprite_index = spr_doorBoss;
 	}
 	once = false;
 }
