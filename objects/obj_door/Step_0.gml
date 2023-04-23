@@ -16,15 +16,15 @@ if(open and once)
 	{
 		randomize();
 		percent = irandom_range(0,100);
-		if(percent < 70)
+		if(percent < 80)
 		{
 			path = 1;
 		}
-		if (percent > 70 and percent < 90)
+		if (percent > 80 and percent < 95)
 		{
 			path = 2;
 		}
-		if (percent > 90)
+		if (percent > 95)
 		{
 			path = 3;
 		}

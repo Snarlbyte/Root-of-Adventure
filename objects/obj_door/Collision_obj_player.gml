@@ -17,12 +17,12 @@ if (self.sprite_index = spr_doorHeal and keyboard_check_pressed(vk_down))
 
 if (self.sprite_index = spr_doorMini and keyboard_check_pressed(vk_down))
 {
-	room_goto(RoomHeal);
+	room_goto(RoomMini);
 	obj_scoreboard.rooms += 1;
 }
 
 if (self.sprite_index = spr_doorBoss and keyboard_check_pressed(vk_down))
 {
-	room_goto(RoomHeal);
+	room_goto(RoomBoss);
 	obj_scoreboard.rooms += 1;
 }
