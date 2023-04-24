@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Menus",
+    "path": "folders/Objects/Menus.yy",
   },
   "parentObjectId": null,
   "persistent": false,
@@ -24,7 +24,7 @@
   "physicsShapePoints": [],
   "physicsStartAwake": true,
   "properties": [],
-  "solid": false,
+  "solid": true,
   "spriteId": {
     "name": "spr_wall",
     "path": "sprites/spr_wall/spr_wall.yy",

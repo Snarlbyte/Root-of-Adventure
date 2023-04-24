@@ -1,28 +1,34 @@
 //which path chosen
-if (self.sprite_index = spr_doorCombat and keyboard_check_pressed(vk_down))
-{
-	room_goto(RoomCombat);
-	obj_scoreboard.rooms += 1;
-}
-if (self.sprite_index = spr_doorTreasure and keyboard_check_pressed(vk_down))
-{
-	room_goto(RoomTreasure);
-	obj_scoreboard.rooms += 1;
-}
-if (self.sprite_index = spr_doorHeal and keyboard_check_pressed(vk_down))
-{
-	room_goto(RoomHeal);
-	obj_scoreboard.rooms += 1;
-}
-
-if (self.sprite_index = spr_doorMini and keyboard_check_pressed(vk_down))
-{
-	room_goto(RoomMini);
-	obj_scoreboard.rooms += 1;
-}
-
-if (self.sprite_index = spr_doorBoss and keyboard_check_pressed(vk_down))
-{
-	room_goto(RoomBoss);
-	obj_scoreboard.rooms += 1;
+if keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S")){
+	switch(self.sprite_index)
+	{
+		case spr_doorCombat:	
+			room_goto(RoomCombat);
+			scr_travel();
+			break;
+		case spr_doorTreasure: 
+			room_goto(RoomTreasure);
+			scr_travel();
+			break;
+		case spr_doorHeal:
+			room_goto(RoomHeal);
+			scr_travel();
+			break;
+		case spr_doorMini:
+			room_goto(RoomMini);
+			scr_travel();
+			break;
+		case spr_doorBoss:
+			if(path != 6){
+				room_goto(RoomBoss);
+				scr_travel();
+			} else {
+				room_goto(RoomBoss); // PUT WIN SCREEN HERE
+			}
+			break;
+		case spr_doorClosed:
+			break;
+		default:
+			break;
+	}
 }

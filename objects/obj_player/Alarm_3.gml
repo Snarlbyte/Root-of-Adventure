@@ -1,2 +1,0 @@
-//delay attack
-magic = true;

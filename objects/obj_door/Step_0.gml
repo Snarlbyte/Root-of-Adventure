@@ -1,4 +1,7 @@
 //open and choose room
+if(!instance_exists(obj_deacon)){
+	open = true;
+}
 
 if(open and once)
 {
@@ -10,7 +13,8 @@ if(open and once)
 	else if(obj_scoreboard.rooms == 9)
 	{
 		path = 5;
-	}
+	} else if(obj_scoreboard.rooms == 10)
+	{ path = 6; }
 	
 	else
 	{
@@ -20,11 +24,11 @@ if(open and once)
 		{
 			path = 1;
 		}
-		if (percent > 80 and percent < 95)
+		if (percent >= 80 and percent < 95)
 		{
 			path = 2;
 		}
-		if (percent > 95)
+		if (percent >= 95)
 		{
 			path = 3;
 		}
@@ -35,16 +39,19 @@ if(open and once)
 			self.sprite_index = spr_doorCombat;
 			break;
 		case 2:
-			self.sprite_index = spr_doorTreasure;
+			if(obj_player.hp > 95){ self.sprite_index = spr_doorCombat;
+			} else { self.sprite_index = spr_doorHeal; }
 			break;
 		case 3:
-			self.sprite_index = spr_doorHeal;
+			self.sprite_index = spr_doorTreasure;
 			break;
 		case 4:
 			self.sprite_index = spr_doorMini;
 			break;
 		case 5:
-			self.sprite_index = spr_doorBoss;
+		case 6:
+			self.sprite_index = spr_doorBoss
+			break;
 	}
 	once = false;
 }
