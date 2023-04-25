@@ -15,7 +15,7 @@ else if(obj_scoreboard.magicW){
 	self.sprite_index = spr_wind;
 	alarm[0] = 20;
 }
-
-direction = point_direction(x,y,obj_player.x,obj_player.y);
+if !rdirection direction = point_direction(x,y,obj_player.x,obj_player.y);
+else direction = random_range(0,360);
 
 tempBounce = obj_scoreboard.bounce;

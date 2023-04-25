@@ -1,2 +1,2 @@
-/// @description set time to last
-alarm[0] = 30;
+TTL = 20;
+alarm[0] = TTL;

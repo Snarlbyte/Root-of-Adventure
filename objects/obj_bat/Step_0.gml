@@ -1,7 +1,7 @@
 /// @description
 /// @description
 hsp = 0;
-if(object_exists(obj_player)){
+if(instance_exists(obj_player)){
 	pDirection = point_direction(x,y,obj_player.x,obj_player.y);
 	pDistance = distance_to_object(obj_player);
 	

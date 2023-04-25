@@ -2,11 +2,11 @@
 /// @description
 hsp = 0;
 vsp = vsp + grv;
-if(object_exists(obj_player)){
+if(instance_exists(obj_player)){
 	pDirection = point_direction(x,y,obj_player.x,obj_player.y);
 	pDistance = distance_to_object(obj_player);
 	
-	attack = (pDistance < attackRange) ? true : false;
+	if((pDistance < attackRange) && (alarm[0]<=0)) attack = true;
 	if (place_meeting(x,y+vsp,obj_wall)&&target) sprite_index = (attack) ?  spr_guardHammer : spr_guardIdle;
 	if(target){
 		if(pDirection > 90 && pDirection < 270){
@@ -26,11 +26,11 @@ if(object_exists(obj_player)){
 	
 	if(!collision_line(x,y,obj_player.x,obj_player.y,obj_wall,false,false)){
 		target = true;
-		if(place_meeting(x,y+vsp,obj_wall)) && (attack){
+		if(place_meeting(x,y+vsp,obj_wall)) && (spr_guardHammer){
 			if(alarm[0] <= 0){
 				alarm[2] = 30;
 				alarm[0] = 240;
-				alarm[3] = 120;
+				alarm[3] = 90;
 			}
 		}
 	} else {target = false;}

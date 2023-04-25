@@ -1,7 +1,9 @@
-image_xscale = 0.5;
-image_yscale = 0.5;
+image_xscale = 1;
+image_yscale = 1;
 immune = false;
 target = false;
 grv = 0.6;
 attack = false;
 tempScale = image_xscale;
+once=true;
+done = false;

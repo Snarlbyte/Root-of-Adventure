@@ -8,6 +8,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":1,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":2,"eventType":2,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":3,"eventType":2,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
   ],
   "managed": true,
   "overriddenProperties": [
@@ -42,6 +43,9 @@
     "name": "spr_guardIdle",
     "path": "sprites/spr_guardIdle/spr_guardIdle.yy",
   },
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "spr_guardIdle",
+    "path": "sprites/spr_guardIdle/spr_guardIdle.yy",
+  },
   "visible": true,
 }

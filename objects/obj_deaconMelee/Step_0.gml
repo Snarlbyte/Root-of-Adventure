@@ -7,7 +7,7 @@ if(object_exists(obj_player)){
 	pDistance = distance_to_object(obj_player);
 	
 	attack = (pDistance < attackRange) ? true : false;
-	if (place_meeting(x,y+vsp,obj_wall)&&target) sprite_index = (attack) ?  spr_melee : spr_meleeIdle;
+	if (place_meeting(x,y+vsp,obj_wall)&&target) sprite_index = (attack) ?  spr_meleeAttack : spr_meleeIdle;
 	if(target){
 		if(pDirection > 90 && pDirection < 270){
 			image_xscale = tempScale;
@@ -28,6 +28,7 @@ if(object_exists(obj_player)){
 		target = true;
 		if(place_meeting(x,y+vsp,obj_wall)) && (attack){
 			if(alarm[0] <= 0){
+				audio_play_sound(snd_hit,1,false);
 				instance_create_layer(x-(sign(image_xscale)*28),y-45,"Instances", obj_meleeFire);
 				alarm[0] = 120;
 			}
