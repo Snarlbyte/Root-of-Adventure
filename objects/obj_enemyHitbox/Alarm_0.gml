@@ -1,0 +1,1 @@
+self.instance_destroy();

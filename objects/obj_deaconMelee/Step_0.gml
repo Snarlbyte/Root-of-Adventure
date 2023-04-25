@@ -7,7 +7,7 @@ if(object_exists(obj_player)){
 	pDistance = distance_to_object(obj_player);
 	
 	attack = (pDistance < attackRange) ? true : false;
-	if (place_meeting(x,y+vsp,obj_wall)&&target) sprite_index = (attack) ?  spr_meleeAttack : spr_deaconIdle;
+	if (place_meeting(x,y+vsp,obj_wall)&&target) sprite_index = (attack) ?  spr_melee : spr_meleeIdle;
 	if(target){
 		if(pDirection > 90 && pDirection < 270){
 			image_xscale = tempScale;

@@ -28,8 +28,9 @@ if(object_exists(obj_player)){
 		target = true;
 		if(place_meeting(x,y+vsp,obj_wall)) && (attack){
 			if(alarm[0] <= 0){
-				instance_create_layer(x-(sign(image_xscale)*28),y-45,"Instances", obj_enemyHitbox);
+				alarm[2] = 30;
 				alarm[0] = 240;
+				alarm[3] = 120;
 			}
 		}
 	} else {target = false;}

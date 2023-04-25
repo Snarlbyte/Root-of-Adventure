@@ -23,7 +23,7 @@ if keyboard_check_pressed(vk_down) or keyboard_check_pressed(ord("S")){
 				room_goto(RoomBoss);
 				scr_travel();
 			} else {
-				room_goto(RoomBoss); // PUT WIN SCREEN HERE
+				room_goto(RoomEnd); // PUT WIN SCREEN HERE
 			}
 			break;
 		case spr_doorClosed:

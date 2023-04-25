@@ -1,7 +1,7 @@
 // simple if on one, two, three for upgrades
-if(keyboard_check_pressed(ord("1")) and obj_scoreboard.damageInc < .75)
+if(keyboard_check_pressed(ord("1")) and obj_scoreboard.damageInc < 1.5)
 {
-	obj_scoreboard.damageInc += 0.25;
+	obj_scoreboard.damageInc += 0.5;
 	self.instance_destroy();
 }
 
